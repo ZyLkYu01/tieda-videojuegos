@@ -1,22 +1,17 @@
 import { JUEGOS } from "./data/juegos";
-import "./App.css";
 
 function App() {
   return (
-    <div className="tienda-contenedor">
-      <h1>🎮 Mi Tienda de Videojuegos</h1>
+    <div>
+      <h1>Gaming Store</h1>
 
-      <div className="lista-juegos">
+      <div>
         {JUEGOS.map((juego) => (
-          <div key={juego.id} className="tarjeta">
-            <img
-              src={juego.imagen}
-              alt={juego.titulo}
-              style={{ width: "200px" }}
-            />
+          <div key={juego.id}>
+            <img src={juego.imagen} alt={juego.titulo} />
             <h3>{juego.titulo}</h3>
             <p>${juego.precio} MXN</p>
-            <button onClick={() => alert("¡Agregado!")}>Comprar</button>
+            <button onClick={() => alert("Añadido")}>Comprar</button>
           </div>
         ))}
       </div>
